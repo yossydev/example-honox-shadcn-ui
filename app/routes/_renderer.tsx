@@ -5,7 +5,6 @@ import { FC, PropsWithChildren } from "react";
 const HasIslands: FC<PropsWithChildren> = ({ children }) => {
   const IMPORTING_ISLANDS_ID = "__importing_islands" as const;
   const c = useRequestContext();
-  console.log("c.get(IMPORTING_ISLANDS_ID)", c.get(IMPORTING_ISLANDS_ID));
   return <>{c.get(IMPORTING_ISLANDS_ID) ? children : <></>}</>;
 };
 
