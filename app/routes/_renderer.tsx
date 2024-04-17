@@ -1,3 +1,4 @@
+import { NavigationMenuDemo } from "@/islands/NavigationMenuDemo";
 import { reactRenderer } from "@hono/react-renderer";
 import { useRequestContext } from "@hono/react-renderer";
 import { FC, PropsWithChildren } from "react";
@@ -29,7 +30,10 @@ export default reactRenderer(({ children, title }) => {
         )}
         {title ? <title>{title}</title> : ""}
       </head>
-      <body>{children}</body>
+      <body>
+        <NavigationMenuDemo />
+        {children}
+      </body>
     </html>
   );
 });
